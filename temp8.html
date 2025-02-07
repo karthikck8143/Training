@@ -2,10 +2,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Reg Page</title>
     <script>
+        let users=[]
         function showData(){
-            alert("Hello World!!!!");
+            // alert box
+            // alert("Hello World!!!!");
+            
+            let name=document.getElementById("name").value;
+            let email=document.getElementById("email").value;
+            let password=document.getElementById("password").value;
+            let dob=document.getElementById("dob").value;
+            //data.innerHTML= name + " | " +  email + " | " + password + " | " + dob;
+            let user={
+                name:name,
+                email:email,
+                password:password,
+                dob:dob
+            }
+            users.push(user)
+            console.log(users);
+            let length=users.length
+            let str=""
+             for(let i=0 ; i<length ; i++){
+             str = str + `<li>${users[i].name}-${users[i].email}-${users[i].password}-${users[i].dob}</li>`
+            }
+            data.innerHTML=str
+            // data.innerHTML= `${name} | ${email} | ${password} | ${dob}`
+            
         }
     </script>
   </head>
@@ -13,8 +37,8 @@
     <h1>New Registration Form</h1>
     <P><input type="text" id="name" placeholder="Enter Name" /></P>
     <P><input type="text" id="email" placeholder="Enter Email Address" /></P>
-    <P><input type="text" id="password" placeholder="Enter Password" /></P>
-    <P><input type="datetime-local" id="dob" /></P>
+    <P><input type="password" id="password" placeholder="Enter Password" /></P>
+    <P><input type="date" id="dob" /></P>
     <button onclick="showData()">Register</button>
     <hr />
     <div id="data"></div>

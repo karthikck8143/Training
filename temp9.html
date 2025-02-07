@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log page</title>
+    <script>
+        function showData(){
+
+            let email=document.getElementById("email").value;
+            let password=document.getElementById("password").value;
+            // data.innerHTML = `${email} | ${password}`;
+            if(email==="kotichowdaryus@yahoo.com"&&password==="1234"){
+                data.innerHTML='Welcome John';
+            }else{
+                data.innerHTML='Access Denied';
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>Login Form</h1>
+    <P><input type="text" id="email" placeholder="Enter Email Address" /></P>
+    <P><input type="password" id="password" placeholder="Enter Password" /></P>
+    <button onclick="showData()">Log In</button>
+    <hr>
+    <div id="data"></div>
+</body>
+</html>
