@@ -7,16 +7,20 @@
     <script>
         function func(){
             var x = document.getElementById("color").value;
-            let y= document.getElementById("back").value;
-            document.body.style.color=x;
+            var y=document.getElementById('back').value;
             box.style.color=x;
             box.style.background=y;
         }
     </script>
 </head>
 <body>
-    <p><input type="text" id="color" name="color"></p>
-    <p><input type="text" id="back" name="color"></p>
+    <p><input type="text" id="color" name="color" placeholder="Enter Color of Text"></p>
+    <p><select name="back" id="back">
+        <option value="white">--Select--</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="lightgreen">Green</option>
+    </select></p>
     <p><button onclick="func()">Change</button></p>
     <div id="box">Hello World</div>
 </body>
